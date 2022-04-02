@@ -40,35 +40,66 @@ body {
 header {
     display: flex;
     width: 100%;
-    height: 75px;
+    height: 100px;
     justify-content: space-between;
-    background-color: grey;
+    background-color: var(--primary-color);
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
 }
 header h1 {
-    margin: 10px 10px;
+    margin: auto 15px;
     padding: 5px;
-    background-color: aquamarine;
-    border: 2px solid blue;
-    font-size: 36px;
+    height: fit-content;
+    background-color: var(--tertiary-color);
+    font-size: 45px;
+    border-radius: 3px;
+    text-shadow: 0 0 10px rgba(255, 35, 255, 0.49)
+}
+header nav {
+    margin: auto 5px;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+header nav ul li {
+    padding: 10px;
+}
+header nav ul li a {
+    color: var(--primary-color);
+    padding: 3px;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: var(--tertiary-color);
+    border-radius: 3px;
 }
 
 .hero {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 125px;
     background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
+.hero h2 {
+    position: relative;
+    right: 16.5%;
+    top: 6%;
+}
 .hero p {
     position: relative;
-    height: fit-content;
-    width: fit-content;
-    top: 60%;
-    left: 89.5%;
+    left: 16.5%;
+    top: 10%;
+    margin: auto 0px;
     padding: 10px;
     background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
     background-size: 400% 400%;
 	animation: rev-gradient 15s ease infinite;
+    font-weight: bold;
+    font-size: 45px;
+    border-radius: 3px;
 }
