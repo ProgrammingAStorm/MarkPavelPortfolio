@@ -1,4 +1,74 @@
+/*make header and hero background an animated linear gradient wave and make sure the backgrounds line up like the run buddy*/
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes rev-gradient {
+	0% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+:root {
+    --primary-color: #1956FF;
+    --secondary-color: #FF23FF;
+    --tertiary-color: #42D7EB;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    background-color: grey;
+    position: -webkit-sticky;
+    position: sticky;
+}
+header h1 {
+    margin: 10px 10px;
+    padding: 5px;
+    background-color: aquamarine;
+    border: 2px solid blue;
+    font-size: 36px;
+}
+
+.hero {
+    width: 100%;
+    height: 125px;
+    background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+.hero p {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    top: 60%;
+    left: 89.5%;
+    padding: 10px;
+    background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
+    background-size: 400% 400%;
+	animation: rev-gradient 15s ease infinite;
 }
