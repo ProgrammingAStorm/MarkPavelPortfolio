@@ -39,8 +39,9 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
+    padding: 19px;
     width: 100%;
-    height: 100px;
     justify-content: space-between;
     background-color: var(--primary-color);
     position: -webkit-sticky;
@@ -48,7 +49,7 @@ header {
     top: 0;
 }
 header h1 {
-    margin: auto 15px;
+    margin: auto 0;
     padding: 5px;
     height: fit-content;
     background-color: var(--tertiary-color);
@@ -57,10 +58,11 @@ header h1 {
     text-shadow: 0 0 10px rgba(255, 35, 255, 0.49)
 }
 header nav {
-    margin: auto 5px;
+    margin: auto 35px;
 }
 header nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
 }
@@ -78,28 +80,38 @@ header nav ul li a {
 
 .hero {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
-    height: 125px;
+    height: 400px;
     background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
     background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
 .hero h2 {
-    position: relative;
-    right: 16.5%;
-    top: 6%;
+    height: fit-content;
+    margin: auto 0;
+    text-align: center;
 }
 .hero p {
-    position: relative;
-    left: 16.5%;
-    top: 10%;
-    margin: auto 0px;
-    padding: 10px;
+    height: fit-content;
+    padding: 3%;    
+    margin: auto 0;
     background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
     background-size: 400% 400%;
 	animation: rev-gradient 15s ease infinite;
     font-weight: bold;
     font-size: 45px;
     border-radius: 3px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contents {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
 }
