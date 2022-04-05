@@ -20,6 +20,23 @@
 		background-position: 100% 50%;
 	}
 }
+@keyframes flicker {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 35, 255, .5);
+    }
+    25% {
+       text-shadow: 0 0 15px rgba(255, 35, 255, 1)
+    }
+    81.25% {
+        text-shadow: 0 0 15px rgba(255, 35, 255, 1)
+    }
+    87.5% {
+        text-shadow: 0 0 15px rgba(255, 35, 255, .5)
+    }
+    93.75% {
+        text-shadow: 0 0 15px rgba(255, 35, 255, 1)
+    }
+}
 
 :root {
     --primary-color: #1956FF;
@@ -36,7 +53,6 @@ body {
     background: var(--primary-color);
 }
 
-/*h1 shadow flixker effect*/
 header {
     display: flex;
     flex-wrap: wrap;
@@ -52,12 +68,13 @@ header {
 header h1 {
     margin: auto 0;
     padding: 5px;
-    height: fit-content;
     background-color: var(--secondary-color);
     border: 1px solid black;
     border-radius: 3px;
     font-size: 45px;
-    text-shadow: 0 0 10px rgba(255, 35, 255, 0.49)
+    text-shadow: 0 0 10px rgba(255, 35, 255, 1);
+    animation: flicker 1.5s ease infinite;
+    color: var(--primary-color);
 }
 header nav {
     margin: auto 35px;
@@ -68,23 +85,20 @@ header nav ul {
     justify-content: space-between;
     list-style: none;
 }
-/*
-    IMPORTANT 
-later see if i can swap and make the li background instead of a background*/
 header nav ul li {
-    padding: 10px;
+    margin: 10px;    
+    background-color: var(--secondary-color);
 }
 header nav ul li a {
     color: var(--primary-color);
     padding: 3px;
-    background-color: var(--secondary-color);
     border-radius: 3px;
     border: 1px solid black;
     text-decoration: none;
     font-size: 25px;
 }
 
-.hero {
+#hero {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -93,14 +107,14 @@ header nav ul li a {
     background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
     background-size: 400% 400%;
 	animation: gradient 13s ease infinite;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(25, 86, 255, .5);
 }
-.hero h2 {
+#hero h2 {
     height: fit-content;
     margin: auto 0;
     text-align: center;
 }
-.hero p {
+#hero p {
     height: fit-content;
     padding: 3%;    
     margin: auto 0;
@@ -112,8 +126,7 @@ header nav ul li a {
     border-radius: 3px;
 }
 
-/*do the whole border animation shenananandandigans with a before or something m,aybe*/
-.content-wrapper {
+#content-wrapper {
     margin: 5px 5px 5px 5px;
     padding: 5px;
     background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
@@ -121,7 +134,7 @@ header nav ul li a {
 	animation: gradient 13s ease infinite;
     border: 5px solid var(--secondary-color);
 }
-.content {
+#content {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -153,23 +166,25 @@ header nav ul li a {
     margin: auto 0;
     font-size: 57px;
 }
-.content p,
+#about-me-wrapper,
 .contents address,
-.contents .img-wrapper {
+#img-wrapper {
     width: 75%;
     padding: 10px;
     border-left: 5px solid var(--tertiary-color);
     font-size: 25px;
+    color: var(--tertiary-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.contents p, .contents address {
+#about-me-wrapper {
     margin-top: 5px;
 }
-.contents .img-wrapper {
+#img-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.contents .img-wrapper a {
+#img-wrapper a {
     height: 50%;
     width: 50%;
     margin: 5px;
@@ -178,12 +193,12 @@ header nav ul li a {
     border: 3px solid var(--primary-color);
     z-index: 1;
 }
-.contents .img-wrapper a:first-child {
+#img-wrapper a:first-child {
     height: 75%;
     width: 75%;
 }
 
-.contents .img-wrapper img {
+#img-wrapper img {
     display: block;
     width: 100%;
     margin: 0 auto;
@@ -191,16 +206,71 @@ header nav ul li a {
 .contents address {
     margin-bottom: 5px;
 }
+.contents address a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
 
-.song {
+#extras {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
     margin: 5px;
 }
-.song a {
-    padding: 3px;
-    border: 3px solid var(--secondary-color);
+#extras figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 25px 0;
+}
+#heart-wrapper {
+    margin: 75px 0 50px 0;
+}
+#heart-shape {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
+    background-size: 400% 400%;
+	animation: rev-gradient 13s ease infinite;
+    border-bottom: 3px solid var(--secondary-color);
+    border-right: 3px solid var(--secondary-color);
+    transform: rotate(45deg);
+}
+#heart-shape:before {
+    position: absolute;
+    bottom: -3px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    content: '';
+    border-radius: 50%;
+    background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
+    background-size: 400% 400%;
+	animation: gradient 13s ease infinite;
+    border-left: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color)
+}
+#heart-shape:after {
+    position: absolute;
+    top: -100px;
+    right: -3px;
+    width: 200px;
+    height: 200px;
+    content: '';
+    border-radius: 50%;
+    background: linear-gradient(-50deg, #1956FF, #FF23FF, #42D7EB);
+    background-size: 400% 400%;
+	animation: gradient 13s ease infinite;
+    border-right: 3px solid var(--secondary-color);
+    border-top: 3px solid var(--secondary-color);
+}
+#extras a {
     font-size: 25px;
     text-shadow: 0 0 10px rgba(66, 215, 235, .5);
-    color: var(--tertiary-color);    
+    color: var(--tertiary-color); 
+}
+#song {
+    padding: 3px;
+    border: 3px solid var(--secondary-color);   
 }
