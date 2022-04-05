@@ -1,3 +1,8 @@
+/************************************************************************************
+ *These are the definitions for that animations that are used.                      *
+ *The percentages represent at what point in time to apply the changes to a property*
+ *The changes in sequence cause the animation                                       *
+ ************************************************************************************/
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -37,7 +42,9 @@
         text-shadow: 0 0 15px rgba(255, 35, 255, 1)
     }
 }
-
+/***************************************************
+ *These are the definitions of the color variables.*
+ ***************************************************/
 :root {
     --primary-color: #1956FF;
     --secondary-color: #42D7EB;
@@ -58,11 +65,18 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 19px;
+    /*************************************************************************
+     *The first position property is the sticky property supported by Safari.*
+     *The other is the property supported by all other browsers              *
+     *************************************************************************/
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: var(--primary-color);
     border: 1px solid black;
+    /*****************************************************************************
+     *This is to ensure that the header stays on top when its position is sticky.*
+     *****************************************************************************/
     z-index: 9999;
 }
 header h1 {
@@ -104,6 +118,12 @@ header nav ul li a {
     justify-content: space-around;
     width: 100%;
     height: 400px;
+    /************************************************************************************************
+     *The background is set to a linear gradient and expanded.                                      *
+     *Then the animation is set appropriately, as well as the desired time.                         *
+     *Then the transition is set to ease to flow into each frame rather than snap to each frame.    *
+     *Finally, the repeat is set to infinite to seemlessly transition from the end back to the start*
+     ************************************************************************************************/
     background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
     background-size: 400% 400%;
 	animation: gradient 13s ease infinite;
@@ -126,6 +146,9 @@ header nav ul li a {
     border-radius: 3px;
 }
 
+/****************************************************************************************
+ *This wrapper is purely to wrap around the contents and pad out for an animated border.*
+ ****************************************************************************************/
 #content-wrapper {
     margin: 5px 5px 5px 5px;
     padding: 5px;
@@ -165,6 +188,9 @@ header nav ul li a {
     width: 25%;
     font-size: 57px;
 }
+/*****************************************************
+ *Properties generic across all of the content types.*
+ *****************************************************/
 #about-me-wrapper,
 .contents address,
 #img-wrapper {
@@ -217,6 +243,10 @@ header nav ul li a {
     align-items: center;
     margin: 5px;
 }
+/**************************************************************************************************
+ *Definition of the heart figure. Its a div with a square shape and a circular :before and :after.*
+ *The before and after are positioned appropriately, and then the whole afair is rotated 45deg.   *
+ **************************************************************************************************/
 #extras figure {
     display: flex;
     flex-direction: column;
@@ -275,6 +305,10 @@ header nav ul li a {
     border: 3px solid var(--secondary-color);   
 }
 
+/*************************************************************************************************
+ *Minor changes to the formating of some elements based off of the width of the viewport.        *
+ *This allows for mobile friendliness by changing things that break when the screen gets smaller.*
+ *************************************************************************************************/
 @media screen and (max-width: 952px) {
     .contents {
         flex-direction: column;
