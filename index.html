@@ -3,95 +3,136 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
+        
         <title>Mark Pavel's Coding Portfolio</title>
     </head>
-    <body>
-        <header>
-            <h1>Mark Pavel</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a href="#work">Work</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact Me</a>
-                    </li>
-                </ul>
+    <body class="background-secondary">
+        <header id="header" class="navbar card background-primary">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="">
+                    <figure class="is-flex is-flex-direction-column is-align-items-center m-3">
+                        <div id="heart-shape"></div>
+                    </figure>
+                </a>
+            </div>
+
+            <nav class="navbar-start breadcrumb">
+                <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#about">About Me</a>
+                        
+                <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#work">Work</a>
+                
+                <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#contact">Contact Me</a>     
             </nav>
         </header>
 
-        <!--I've called this a hero, but is it really a hero? Does a hero have to be indicative of action like with Run Buddy?
-        Or does it just have to be the first-ish center-ish thing the user sees? 🤔-->
-        <section id="hero">
-            <h2>
-                <a href="https://codepen.io/P1N2O/pen/pyBNzX">
-                    Credit to Manuel Pinto for his AMAZING linear gradient animation. <br>
-                    I like it a lot if you couldn't tell.
-                </a>
-            </h2>
-            <p>Coding Portfolio</p>
-        </section>
-
-        <section id="content-wrapper">
-            <div id="content">
-                <div id="about" class="contents">
-                    <h3>About Me</h3>
-                    <div id="about-me-wrapper">
-                        <p id="bad-rap">
-                           🎵My name is Mark Pavel and I'm here to say,<br>
-                           I'm going to code your site in a major way.🎵<br>
-                           <br>                       
-                        </p>
-                        <p>
-                            Jokes aside, I'm a fullstack developer that has a lot of character.
-                            I like to put my character into my work and I believe it shows.
-                            I can dial-back or otherwise control my character as much as you see fit.
-                            If this is page is a little much for you, then check some of my other work below to see my professional projects;
-                            I have a strong grasp of design professionalism and understand the balance of display, function, and brand presentability.
-                        </p>
+        <section class="hero anim-grad padding-left-right-50px">
+            <div class="hero-body is-flex">            
+                <div class="container is-flex is-justify-content-flex-end">
+                    <div class="mr-6 border-curve anim-border padding-5px">
+                        <h1 class="anim-grad p-6 is-size-1 has-text-primary border-curve">Coding Portfolio</h1>
                     </div>
-                </div>
-    
-                <div id="work" class="contents">
-                    <h3>Work</h3>
-                    <div id="img-wrapper">
-                        <a href="https://programmingastorm.github.io/bcProject/">
-                            <img src="./assets/img/RunBuddy.PNG" alt="Run Buddy">
-                        </a>
-                        <a href="https://programmingastorm.github.io/MarkPavelCodeRefactor/">
-                            <img src="./assets/img/Horiseon.PNG" alt="Horiseon">
-                        </a>
-                    </div>
-                </div>
-        
-                <div id="contact" class="contents">
-                    <h3>Contact</h3>
-                    <address>
-                        55555 Place Road <br>
-                        Townville, OR <br>
-                        98765 <br>
-                        P: 555.555.5555 <br>
-                        E: <a href="mailto:markpavel02@gmail.com">markpavel02@gmail.com</a>
-                    </address>
                 </div>
             </div>
         </section>
 
-        <section id="extras">
-            <figure>
-                <div id="heart-wrapper">
-                    <div id="heart-shape"></div>
-                </div>
-                <h4>
-                    <a href="https://www.hongkiat.com/blog/css-heart-shape/">Heart design from HONGKIAT</a>
-                </h4>
-            </figure>
+        <section class="columns is-multiline has-text-black anim-grad padding-left-right-50px mb-0 m-auto">
+            <div class="background-secondary">                
+                <div id="about" class="column is-full mt-3 mb-3">
+                    <div class="columns">
+                        <div class="column is-one-quarter is-offset-1 padding-0px padding-right-3px anim-border">
+                            <div class="is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
+                                <h3 class="is-size-3 has-text-weight-medium anim-shadow">About Me</h3>
+                            </div>
+                        </div>
 
-            <a href="https://www.youtube.com/watch?v=vdpbXdvn1E8" id="song">Here is a song that I like.</a>
+                        <div class="column is-5 ml-5">
+                            <article class="message">
+                                <p class="message-header has-background-black">
+                                    🎵My name is Mark Pavel and I'm here to say,<br>
+                                    I'm going to code your site in a major way.🎵<br>                       
+                                </p>
+                                <p class="message-body has-background-white">
+                                    Jokes aside, I'm a front-end developer that has a lot of character.
+                                    I like to put my character into my work and I believe it shows.
+                                    I can dial-back or otherwise control my character as much as you see fit.
+                                    If this is page is a little much for you, then check some of my other work below to see my professional projects;
+                                    I have a strong grasp of design professionalism and understand the balance of display, function, and brand presentability.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="work" class="column is-full mt-3 mb-3">
+                    <div class="columns">
+                        <div class="column is-one-quarter is-offset-1 padding-0px padding-right-3px anim-border">
+                            <div class="is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
+                                <h3 class="is-size-3 has-text-weight-medium anim-shadow">Work</h3>
+                            </div>
+                        </div>
+
+                        <div class="column is-5 ml-5">
+                            <div class="columns is-multiline is-centered">
+                                <div class="column is-full">
+                                    <div class="card">
+                                        <header class="card-header has-background-black">
+                                            <h2 class="card-header-title is-size-4 has-text-light">Run Buddy</h2>
+                                        </header>
+                                        <a class="card-image" href="https://programmingastorm.github.io/bcProject/">
+                                            <img src="./assets/img/RunBuddy.PNG" alt="Run Buddy"></src>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="column is-half">
+                                    <div class="card">
+                                        <header class="card-header has-background-black">
+                                            <h2 class="card-header-title is-size-4 has-text-light">Horiseon</h2>
+                                        </header>
+                                        <a class="card-image" href="https://programmingastorm.github.io/MarkPavelCodeRefactor/">
+                                            <img src="./assets/img/Horiseon.PNG" alt="Horiseon">
+                                        </a>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="contact" class="column is-full mt-3 mb-6">
+                    <div class="columns">
+                        <div class="column is-one-quarter is-offset-1 padding-0px padding-right-3px anim-border">
+                            <div class="is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
+                                <h3 class="is-size-3 has-text-weight-medium anim-shadow">Contact</h3>
+                            </div>
+                        </div>
+                        
+                        <address class="column is-5 m-3 ml-5 anim-border">
+                            <div class="card">
+                                <p class="card-content has-text-centered has-text-black is-size-4 has-text-weight-medium border-0">
+                                    51 Endicott <br>
+                                    Howell, MI <br>
+                                    48843 <br>
+                                    P: 734-341-9709 <br>
+                                    E: <a href="mailto:markpavel02@gmail.com">markpavel02@gmail.com</a>
+                                </p>
+                            </div>
+                        </address>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <footer class="footer pb-6 background-primary">
+            <p class="has-text-centered has-text-black"><strong>Mark Pavel's Coding Portfolio</strong></p>
+            <p class="has-text-centered mt-3"><a class="color-tertiary is-underlined" href="#header">Back to the top.</a></p>
+            <div class="is-flex is-justify-content-center m-6">
+                <figure id="heart-wrapper" class="">
+                    <div id="heart-shape"></div>
+                </figure>
+            </div>
+        </footer>
     </body>
 </html>

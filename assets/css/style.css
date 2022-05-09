@@ -1,8 +1,3 @@
-/************************************************************************************
- *These are the definitions for that animations that are used.                      *
- *The percentages represent at what point in time to apply the changes to a property*
- *The changes in sequence cause the animation                                       *
- ************************************************************************************/
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -41,225 +36,44 @@
     93.75% {
         text-shadow: 0 0 15px rgba(255, 35, 255, 1)
     }
+    96.865% {
+        text-shadow: 0 0 15px rgba(255, 35, 255, .5)
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(255, 35, 255, .5)
+    }
 }
-/***************************************************
- *These are the definitions of the color variables.*
- ***************************************************/
+
 :root {
     --primary-color: #1956FF;
     --secondary-color: #42D7EB;
     --tertiary-color: #FF23FF;
 }
 
-* {
-    margin: 0;
-    padding: 0;
+
+.anim-border {
+    background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
+    background-size: 400% 400%;
+	animation: rev-gradient 13s ease infinite;    
 }
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--primary-color);
+.anim-grad {
+    background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
+    background-size: 400% 400%;
+	animation: gradient 13s ease infinite;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 19px;
-    /*************************************************************************
-     *The first position property is the sticky property supported by Safari.*
-     *The other is the property supported by all other browsers              *
-     *************************************************************************/
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: var(--primary-color);
-    border: 1px solid black;
-    /*****************************************************************************
-     *This is to ensure that the header stays on top when its position is sticky.*
-     *****************************************************************************/
-    z-index: 9999;
+.right-border {
+    border-right: 3px solid var(--tertiary-color);
 }
-header h1 {
-    margin: auto 0;
-    padding: 5px;
-    background-color: var(--secondary-color);
-    border: 1px solid black;
-    border-radius: 3px;
-    font-size: 45px;
+.anim-shadow {
     text-shadow: 0 0 10px rgba(255, 35, 255, 1);
     animation: flicker 1.5s ease infinite;
-    color: var(--primary-color);
-}
-header nav {
-    margin: auto 35px;
-}
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-}
-header nav ul li {
-    margin: 10px;    
-    background-color: var(--secondary-color);
-}
-header nav ul li a {
-    color: var(--primary-color);
-    padding: 3px;
-    border-radius: 3px;
-    border: 1px solid black;
-    text-decoration: none;
-    font-size: 25px;
 }
 
-#hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-    height: 400px;
-    /************************************************************************************************
-     *The background is set to a linear gradient and expanded.                                      *
-     *Then the animation is set appropriately, as well as the desired time.                         *
-     *Then the transition is set to ease to flow into each frame rather than snap to each frame.    *
-     *Finally, the repeat is set to infinite to seemlessly transition from the end back to the start*
-     ************************************************************************************************/
-    background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
-    background-size: 400% 400%;
-	animation: gradient 13s ease infinite;
-    text-shadow: 0 0 10px rgba(25, 86, 255, .5);
-}
-#hero h2 {
-    height: fit-content;
-    margin: auto 0;
-    text-align: center;
-}
-#hero p {
-    height: fit-content;
-    padding: 3%;    
-    margin: auto 0;
-    background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
-    background-size: 400% 400%;
-	animation: rev-gradient 13s ease infinite;
-    font-weight: bold;
-    font-size: 45px;
-    border-radius: 3px;
-}
-
-/****************************************************************************************
- *This wrapper is purely to wrap around the contents and pad out for an animated border.*
- ****************************************************************************************/
-#content-wrapper {
-    margin: 5px 5px 5px 5px;
-    padding: 5px;
-    background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
-    background-size: 400% 400%;
-	animation: gradient 13s ease infinite;
-    border: 5px solid var(--secondary-color);
-}
-#content {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 25px;
-    background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
-    background-size: 400% 400%;
-	animation: rev-gradient 13s ease infinite;
-}
-.contents {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding-bottom: 25px;
-    background-color: var(--secondary-color);
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    text-align: center;
-}
-.contents:first-child {
-    border-top: 1px solid black;
-}
-.contents:last-child {
-    padding: 0;
-    border-bottom: 1px solid black;
-}
-.contents h3 {
-    width: 25%;
-    font-size: 57px;
-}
-/*****************************************************
- *Properties generic across all of the content types.*
- *****************************************************/
-#about-me-wrapper,
-.contents address,
-#img-wrapper {
-    width: 75%;
-    padding: 10px;
-    border-left: 5px solid var(--tertiary-color);
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-size: 25px;
-    color: var(--tertiary-color);
-}
-#about-me-wrapper {
-    margin-top: 5px;
-}
-#img-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#img-wrapper a {
-    height: 50%;
-    width: 50%;
-    margin: 5px;
-    padding: 15px;
-    background: gainsboro;
-    border: 3px solid var(--primary-color);
-    z-index: 1;
-}
-#img-wrapper a:first-child {
-    height: 75%;
-    width: 75%;
-}
-
-#img-wrapper img {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-.contents address {
-    margin: 5px;
-}
-.contents address a {
-    text-decoration: none;
-    color: var(--tertiary-color);
-}
-
-#extras {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-}
-/**************************************************************************************************
- *Definition of the heart figure. Its a div with a square shape and a circular :before and :after.*
- *The before and after are positioned appropriately, and then the whole afair is rotated 45deg.   *
- **************************************************************************************************/
-#extras figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0 25px 0;
-}
-#heart-wrapper {
-    margin: 75px 0 50px 0;
-}
 #heart-shape {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 35px;
+    height: 35px;
     background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
     background-size: 400% 400%;
 	animation: rev-gradient 13s ease infinite;
@@ -269,24 +83,22 @@ header nav ul li a {
 }
 #heart-shape:before {
     position: absolute;
-    bottom: -3px;
-    left: -100px;
-    width: 200px;
-    height: 200px;
+    width: 35px;
+    height: 35px;
+    left: -15px;
     content: '';
     border-radius: 50%;
     background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
     background-size: 400% 400%;
 	animation: gradient 13s ease infinite;
     border-left: 3px solid var(--secondary-color);
-    border-bottom: 3px solid var(--secondary-color)
+    border-bottom: 3px solid var(--secondary-color);
 }
 #heart-shape:after {
     position: absolute;
-    top: -100px;
-    right: -3px;
-    width: 200px;
-    height: 200px;
+    width: 35px;
+    height: 35px;
+    top: -15px;
     content: '';
     border-radius: 50%;
     background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
@@ -295,74 +107,46 @@ header nav ul li a {
     border-right: 3px solid var(--secondary-color);
     border-top: 3px solid var(--secondary-color);
 }
-#extras a {
-    font-size: 25px;
-    text-shadow: 0 0 10px rgba(66, 215, 235, .5);
-    color: var(--tertiary-color); 
+
+.border-curve {
+    border-radius: 3%;
 }
-#song {
-    padding: 3px;
-    border: 3px solid var(--secondary-color);   
+.border-0 {
+    border: 0;
 }
 
-/*************************************************************************************************
- *Minor changes to the formating of some elements based off of the width of the viewport.        *
- *This allows for mobile friendliness by changing things that break when the screen gets smaller.*
- *************************************************************************************************/
-@media screen and (max-width: 952px) {
-    .contents {
-        flex-direction: column;
-    }
-
-    .contents h3 {
-        width: fit-content;
-    }
-
-    #about-me-wrapper,
-    .contents address,
-    #img-wrapper {
-        border-left: 0;
-        border-top: 5px solid var(--tertiary-color);
-    }
+.margin-right-0px {
+    margin-right: 0;
 }
-@media screen and (max-width: 733px) {
-    header {
-        flex-direction: column;
-    }
-    header h1 {
-        margin: auto;
-    }
-    header nav ul {
-        justify-content: center;
-    }
 
-    #hero {
-        flex-direction: column-reverse;
-    }
-    #hero p {
-        margin: auto;
-    }
-
-    .contents h3 {
-        font-size: 45px;
-    }
+.padding-0px {
+    padding: 0;
 }
-@media screen and (max-width: 595px) {
-    header {
-        position: static;
-    }
-
-    #hero h2 a {
-        font-size: 20px;
-    }
-    #hero p {
-        font-size: 35px;
-    }
-    
+.padding-5px {
+    padding: 5px;
 }
-@media screen and (max-width: 499px) {
-    .contents address {
-        font-size: 20px;
-        font-weight: 700;
-    }
+.padding-right-3px {
+    padding-right: 3px;
+}
+.padding-left-right-50px {
+    padding: 0 50px;
+}
+
+.size-100 {
+    height: 100%;
+    width: 100%;
+}
+
+.background-primary {
+    background: var(--primary-color);
+}
+.background-secondary {
+    background: var(--secondary-color);
+}
+.background-tertiary {
+    background: var(--tertiary-color);
+}
+
+.color-tertiary {
+    color: var(--tertiary-color)!important;
 }
