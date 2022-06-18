@@ -50,6 +50,16 @@
     --tertiary-color: #FF23FF;
 }
 
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main {
+    opacity: 90%;
+}
 
 .anim-border {
     background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
