@@ -61,6 +61,22 @@ main {
     opacity: 90%;
 }
 
+a {
+    color: inherit!important;
+}
+
+.gone {
+    display: none!important;
+}
+
+.height-600 {
+    min-height: 600px;
+}
+
+.margin-top-vh-100 {
+    margin-top: 100vh;
+}
+
 .anim-border {
     background: linear-gradient(-50deg, var(--primary-color), var(--tertiary-color), var(--secondary-color));
     background-size: 400% 400%;
@@ -121,8 +137,8 @@ main {
 .border-curve {
     border-radius: 3%;
 }
-.border-0 {
-    border: 0;
+.border-none {
+    border: none!important;
 }
 
 .margin-right-0px {
@@ -148,7 +164,7 @@ main {
 }
 
 .background-primary {
-    background: var(--primary-color);
+    background: var(--primary-color)!important;
 }
 .background-secondary {
     background: var(--secondary-color);
@@ -157,6 +173,9 @@ main {
     background: var(--tertiary-color);
 }
 
+.color-secondary {
+    color: var(--secondary-color)!important;
+}
 .color-tertiary {
     color: var(--tertiary-color)!important;
 }

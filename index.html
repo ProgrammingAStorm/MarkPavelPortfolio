@@ -14,13 +14,13 @@
 
         <main class="section">
             <header id="header" class="navbar card background-primary">
-                <div class="navbar-brand">
+                <nav class="navbar-brand">
                     <a class="navbar-item" href="">
                         <figure class="is-flex is-flex-direction-column is-align-items-center m-3">
                             <div id="heart-shape"></div>
                         </figure>
                     </a>
-                </div>
+                </nav>
     
                 <nav class="navbar-start breadcrumb">
                     <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#about">About Me</a>
@@ -31,90 +31,159 @@
                 </nav>
             </header>
     
-            <section class="hero anim-grad padding-left-right-50px">
+            <section class="hero anim-grad card padding-left-right-50px margin-top-vh-100 mb-6">
                 <div class="hero-body is-flex">            
                     <div class="container is-flex is-justify-content-flex-end">
+                        <header id="header" class="navbar card background-primary px-3 my-6 mr-6">
+                            <nav class="navbar-brand">
+                                <a class="navbar-item" href="">
+                                    <figure class="is-flex is-flex-direction-column is-align-items-center m-3">
+                                        <div id="heart-shape"></div>
+                                    </figure>
+                                </a>
+                            </nav>
+                
+                            <nav class="navbar-start breadcrumb">
+                                <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#about">About Me</a>
+                                        
+                                <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#work">Work</a>
+                                
+                                <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#contact">Contact Me</a>     
+                            </nav>
+                        </header>
+
                         <div class="mr-6 border-curve anim-border padding-5px">
-                            <h1 class="anim-grad p-6 is-size-1 has-text-primary border-curve">Coding Portfolio</h1>
+                            <h1 class="anim-grad p-6 is-size-1 color-secondary border-curve">Coding Portfolio</h1>
                         </div>
                     </div>
                 </div>
             </section>
     
-            <section class="columns is-multiline has-text-black anim-grad padding-left-right-50px mb-0 m-auto">
-                <div class="background-secondary">                
-                    <div id="about" class="column is-full mt-3 mb-3">
-                        <div class="columns">
-                            <div class="column is-one-quarter is-offset-1 padding-0px padding-right-3px anim-border">
-                                <div class="is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
-                                    <h3 class="is-size-3 has-text-weight-medium anim-shadow">About Me</h3>
-                                </div>
-                            </div>
-    
-                            <div class="column is-5 ml-5">
-                                <article class="message">
-                                    <p class="message-header has-background-black">
-                                        🎵My name is Mark Pavel and I'm here to say,<br>
-                                        I'm going to code your site in a major way.🎵<br>                       
-                                    </p>
-                                    <p class="message-body has-background-white">
-                                        Jokes aside, I'm a front-end developer that has a lot of character.
-                                        I like to put my character into my work and I believe it shows.
-                                        I can dial-back or otherwise control my character as much as you see fit.
-                                        If this is page is a little much for you, then check some of my other work below to see my professional projects;
-                                        I have a strong grasp of design professionalism and understand the balance of display, function, and brand presentability.
-                                    </p>
-                                </article>
+            <section class="columns is-multiline has-text-black">
+                <div id="about" class="column is-two-fifths is-offset-three-fifths is-flex is-flex-direction-column mt-3 mb-3">
+                    <div class="is-flex is-flex-direction-column">
+                        <div class="column is-half">
+                            <div class="card is-flex is-align-items-center is-justify-content-center background-secondary">
+                                <h3 class="is-size-3 has-text-weight-medium anim-shadow">About Me</h3>
                             </div>
                         </div>
-                    </div>
-    
-                    <div id="work" class="column is-full mt-3 mb-3">
-                        <div class="columns">
-                            <div class="column is-one-quarter is-offset-1 padding-0px padding-right-3px anim-border">
-                                <div class="is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
-                                    <h3 class="is-size-3 has-text-weight-medium anim-shadow">Work</h3>
-                                </div>
-                            </div>
-    
-                            <div class="column is-5 ml-5">
-                                <div class="columns is-multiline is-centered">
-                                    <div class="column is-full">
-                                        <div class="card">
-                                            <header class="card-header has-background-black">
-                                                <h2 class="card-header-title is-size-4 has-text-light">Run Buddy</h2>
-                                            </header>
-                                            <a class="card-image" href="https://programmingastorm.github.io/bcProject/">
-                                                <img src="./assets/img/RunBuddy.PNG" alt="Run Buddy"></src>
-                                            </a>
-                                        </div>
-                                    </div>
-    
-                                    <div class="column is-half">
-                                        <div class="card">
-                                            <header class="card-header has-background-black">
-                                                <h2 class="card-header-title is-size-4 has-text-light">Horiseon</h2>
-                                            </header>
-                                            <a class="card-image" href="https://programmingastorm.github.io/MarkPavelCodeRefactor/">
-                                                <img src="./assets/img/Horiseon.PNG" alt="Horiseon">
-                                            </a>
-                                        </div>                                
-                                    </div>
-    
-                                    <div class="column is-half">
-                                        <div class="card">
-                                            <header class="card-header has-background-black">
-                                                <h2 class="card-header-title is-size-4 has-text-light">FurEverHome</h2>
-                                            </header>
-                                            <a class="card-image" href="https://programmingastorm.github.io/FurEverHome/">
-                                                <img src="./assets/img/FurEverHome.png" alt="FurEverHome">
-                                            </a>
-                                        </div>                                
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div class="column is-three-quarters ml-5">
+                            <article class="message">
+                                <p class="message-header has-background-black">
+                                    🎵My name is Mark Pavel and I'm here to say,<br>
+                                    I'm going to code your site in a major way.🎵<br>                       
+                                </p>
+                                <p class="message-body has-background-white">
+                                    Jokes aside, I'm a front-end developer that has a lot of character.
+                                    I like to put my character into my work and I believe it shows.
+                                    I can dial-back or otherwise control my character as much as you see fit.
+                                    If this is page is a little much for you, then check some of my other work below to see my professional projects;
+                                    I have a strong grasp of design professionalism and understand the balance of display, function, and brand presentability.
+                                </p>
+                            </article>
                         </div>
                     </div>
+                </div>
+
+                <div id="work" class="column is-full mb-6 margin-top-vh-100">
+                    <div class="is-flex is-flex-direction-column">
+                        <div class="column is-two-fifths">
+                            <div class="is-flex is-flex-direction-column has-text-centered">
+                                <h3 class="column is-two-fifths card is-size-3 has-text-weight-medium background-secondary p-1">Work</h3>
+
+                                <a class="column is-three-fifths is-offset-three-fifths" href="https://github.com/ProgrammingAStorm">
+                                    <h3 class="card is-size-3 has-text-weight-medium anim-shadow background-secondary p-1">@GitHub</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card column is-5 ml-5 background-primary height-600">
+                            <div class="tabs is-boxed is-fullwidth">
+                                <ul class="border-none">
+                                    <li class="is-active anim-shadow" data-content="#standard"><a class="">Standard</a></li>
+
+                                    <li class="anim-shadow has-text-light" data-content="#detailed"><a class="">Detailed</a></li>
+                                </ul>
+                            </div>
+
+                            <div id="standard" class="columns is-multiline is-centered">
+                                <div class="column is-full">
+                                    <div class="card">
+                                        <header class="card-header has-background-black">
+                                            <h2 class="card-header-title is-size-4 has-text-light">Run Buddy</h2>
+                                        </header>
+                                        <a class="card-image" href="https://programmingastorm.github.io/RunBuddy/">
+                                            <img src="./assets/img/RunBuddy.PNG" alt="Run Buddy"></src>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="column is-half">
+                                    <div class="card">
+                                        <header class="card-header has-background-black">
+                                            <h2 class="card-header-title is-size-4 has-text-light">Horiseon</h2>
+                                        </header>
+                                        <a class="card-image" href="https://programmingastorm.github.io/MarkPavelCodeRefactor/">
+                                            <img src="./assets/img/Horiseon.PNG" alt="Horiseon">
+                                        </a>
+                                    </div>                                
+                                </div>
+
+                                <div class="column is-half">
+                                    <div class="card">
+                                        <header class="card-header has-background-black">
+                                            <h2 class="card-header-title is-size-4 has-text-light">FurEverHome</h2>
+                                        </header>
+                                        <a class="card-image" href="https://programmingastorm.github.io/FurEverHome/">
+                                            <img src="./assets/img/FurEverHome.png" alt="FurEverHome">
+                                        </a>
+                                    </div>                                
+                                </div>
+                            </div>
+
+                            <aside id="detailed" class="menu gone">
+                                <p class="menu-label">
+                                  General
+                                </p>
+                                <ul class="menu-list">
+                                  <li><a>Dashboard</a></li>
+                                  <li><a>Customers</a></li>
+                                </ul>
+                                <p class="menu-label">
+                                  Administration
+                                </p>
+                                <ul class="menu-list">
+                                  <li><a>Team Settings</a></li>
+                                  <li>
+                                    <a class="is-active">Manage Your Team</a>
+                                    <ul>
+                                      <li><a>Members</a></li>
+                                      <li><a>Plugins</a></li>
+                                      <li><a>Add a member</a></li>
+                                    </ul>
+                                  </li>
+                                  <li><a>Invitations</a></li>
+                                  <li><a>Cloud Storage Environment Settings</a></li>
+                                  <li><a>Authentication</a></li>
+                                </ul>
+                                <p class="menu-label">
+                                  Transactions
+                                </p>
+                                <ul class="menu-list">
+                                  <li><a>Payments</a></li>
+                                  <li><a>Transfers</a></li>
+                                  <li><a>Balance</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">    
+
+    
+
             
                     <div id="contact" class="column is-full mt-3 mb-6">
                         <div class="columns">
@@ -126,7 +195,7 @@
                             
                             <address class="column is-5 m-3 ml-5 anim-border">
                                 <div class="card">
-                                    <p class="card-content has-text-centered has-text-black is-size-4 has-text-weight-medium border-0">
+                                    <p class="card-content has-text-centered has-text-black is-size-4 has-text-weight-medium border-none">
                                         51 Endicott <br>
                                         Howell, MI <br>
                                         48843 <br>
@@ -151,6 +220,14 @@
             </footer>
         </main>
 
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer">
+        </script>
+
         <script src="bundle.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
