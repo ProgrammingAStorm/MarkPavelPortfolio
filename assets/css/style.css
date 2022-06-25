@@ -57,6 +57,11 @@ canvas {
     z-index: -1;
 }
 
+#header h1 {
+    font-size: 5.25rem;
+    color: var(--secondary-color);
+}
+
 main {
     opacity: 90%;
 }

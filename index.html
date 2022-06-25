@@ -12,31 +12,26 @@
     <body>
         <canvas id="bg"></canvas>
 
+        <header id="header" class="card is-flex background-primary m-4 is-justify-content-center">
+            <span class="is-flex is-align-items-center">
+                <h1 class="">
+                    Welcome!
+                </h1>
+                
+                <figure class="is-flex is-flex-direction-column is-align-items-center m-3">
+                    <div id="heart-shape"></div>
+                </figure>
+            </span>
+        </header>
+
         <main class="section">
-            <header id="header" class="navbar card background-primary">
-                <nav class="navbar-brand">
-                    <a class="navbar-item" href="">
-                        <figure class="is-flex is-flex-direction-column is-align-items-center m-3">
-                            <div id="heart-shape"></div>
-                        </figure>
-                    </a>
-                </nav>
-    
-                <nav class="navbar-start breadcrumb">
-                    <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#about">About Me</a>
-                            
-                    <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#work">Work</a>
-                    
-                    <a class="navbar-item color-tertiary is-size-3 has-text-weight-light" href="#contact">Contact Me</a>     
-                </nav>
-            </header>
     
             <section class="hero anim-grad card padding-left-right-50px margin-top-vh-100 mb-6">
                 <div class="hero-body is-flex">            
                     <div class="container is-flex is-justify-content-flex-end">
                         <header id="header" class="navbar card background-primary px-3 my-6 mr-6">
                             <nav class="navbar-brand">
-                                <a class="navbar-item" href="">
+                                <a class="navbar-item" href="#">
                                     <figure class="is-flex is-flex-direction-column is-align-items-center m-3">
                                         <div id="heart-shape"></div>
                                     </figure>
@@ -99,15 +94,15 @@
                         </div>
 
                         <div class="card column is-5 ml-5 background-primary height-600">
-                            <div class="tabs is-boxed is-fullwidth">
+                            <nav class="tabs is-boxed is-fullwidth">
                                 <ul class="border-none">
                                     <li class="is-active anim-shadow" data-content="#standard"><a class="">Standard</a></li>
 
                                     <li class="anim-shadow has-text-light" data-content="#detailed"><a class="">Detailed</a></li>
                                 </ul>
-                            </div>
+                            </nav>
 
-                            <div id="standard" class="columns is-multiline is-centered">
+                            <aside id="standard" class="columns is-multiline is-centered">
                                 <div class="column is-full">
                                     <div class="card">
                                         <header class="card-header has-background-black">
@@ -140,7 +135,7 @@
                                         </a>
                                     </div>                                
                                 </div>
-                            </div>
+                            </aside>
 
                             <aside id="detailed" class="menu gone">
                                 <p class="menu-label">
@@ -180,45 +175,39 @@
                     </div>
                 </div>
 
-                <div class="">    
-
-    
-
-            
-                    <div id="contact" class="column is-full mt-3 mb-6">
-                        <div class="columns">
-                            <div class="column is-one-quarter is-offset-1 padding-0px padding-right-3px anim-border">
-                                <div class="is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
-                                    <h3 class="is-size-3 has-text-weight-medium anim-shadow">Contact</h3>
-                                </div>
+                <div id="contact" class="column is-half is-offset-one-quarter margin-top-vh-100 mb-6">
+                    <div class="is-flex is-flex-direction-column">
+                        <div class="column is-one-quarter is-offset-1 padding-0px">
+                            <div class="card is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
+                                <h3 class="is-size-3 has-text-weight-medium anim-shadow">Contact</h3>
                             </div>
-                            
-                            <address class="column is-5 m-3 ml-5 anim-border">
-                                <div class="card">
-                                    <p class="card-content has-text-centered has-text-black is-size-4 has-text-weight-medium border-none">
-                                        51 Endicott <br>
-                                        Howell, MI <br>
-                                        48843 <br>
-                                        P: 734-341-9709 <br>
-                                        E: <a href="mailto:markpavel02@gmail.com">markpavel02@gmail.com</a>
-                                    </p>
-                                </div>
-                            </address>
                         </div>
+                        
+                        <address class="card m-3 ml-5 p-1 anim-border">
+                            <div class="card">
+                                <p class="card-content has-text-centered has-text-black is-size-4 has-text-weight-medium border-none p-1">
+                                    51 Endicott <br>
+                                    Howell, MI <br>
+                                    48843 <br>
+                                    P: 734-341-9709 <br>
+                                    E: <a href="mailto:markpavel02@gmail.com">markpavel02@gmail.com</a>
+                                </p>
+                            </div>
+                        </address>
                     </div>
                 </div>
             </section>
-    
-            <footer class="footer pb-6 background-primary">
-                <p class="has-text-centered has-text-black"><strong>Mark Pavel's Coding Portfolio</strong></p>
-                <p class="has-text-centered mt-3"><a class="color-tertiary is-underlined" href="#header">Back to the top.</a></p>
-                <div class="is-flex is-justify-content-center m-6">
-                    <figure id="heart-wrapper" class="">
-                        <div id="heart-shape"></div>
-                    </figure>
-                </div>
-            </footer>
         </main>
+
+        <footer class="footer pt-4 pb-6 background-primary">
+            <p class="subtitle has-text-centered has-text-black"><strong>Mark Pavel's Coding Portfolio</strong></p>
+            <p class="has-text-centered mt-3"><a class="color-tertiary is-underlined" href="#header">Back to the top.</a></p>
+            <div class="is-flex is-justify-content-center mt-6 pt-3">
+                <figure id="heart-wrapper" class="">
+                    <div id="heart-shape"></div>
+                </figure>
+            </div>
+        </footer>
 
         <script 
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
@@ -228,6 +217,7 @@
         </script>
 
         <script src="bundle.js"></script>
+        
         <script src="index.js"></script>
     </body>
 </html>
