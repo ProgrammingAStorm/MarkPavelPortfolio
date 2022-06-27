@@ -70,6 +70,17 @@ a {
     color: inherit!important;
 }
 
+.secondary {
+    border-color: var(--secondary-color);
+    background: #d0f4fb;
+    color: #0c778d;
+}
+
+.tertiary {
+    background: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
 .gone {
     display: none!important;
 }
