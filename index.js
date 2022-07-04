@@ -1,5 +1,8 @@
 const $detailed = $('#detailed');
 const $tabs= $('.tabs');
+const $modal = $('.modal');
+const $html = $('html');
+const $description = $('#description');
 
 window.scrollTo(0, 0);
 
@@ -32,6 +35,9 @@ $detailed.on('click', 'a', event => {
     const content = $(event.target).siblings('ul');
 
     if(target.parent().parent().hasClass('border-tertiary')) {
+        $modal.addClass('is-active');
+        $html.addClass('is-clipped')
+
         return;
     }   
 
@@ -50,7 +56,12 @@ $detailed.on('click', 'a', event => {
         target.addClass('is-active');
         content.removeClass('gone');
     }    
-})
+});
+
+$modal.on("click", ".modal-background, .close", function() {
+    $modal.removeClass("is-active");
+    $("html").removeClass("is-clipped");
+});
 
 function checkTabs(target) {
     const content = $(
@@ -58,8 +69,20 @@ function checkTabs(target) {
     );
 
     if(target.hasClass('is-active')) {
+        if(content.attr('id') === 'detailed') {
+            $description.removeClass('gone');
+        }
+
         content.removeClass('gone');
     } else {
+        if(content.attr('id') === 'detailed') {
+            $description.addClass('gone');
+        }
+
         content.addClass('gone');
+    }
+
+    if(target.attr('id') === 'detailed') {
+
     }
 }

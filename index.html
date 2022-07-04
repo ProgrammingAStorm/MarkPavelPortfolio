@@ -53,7 +53,7 @@
                 </div>
             </section>
     
-            <section class="columns is-multiline has-text-black">
+            <section class="section columns is-multiline has-text-black">
                 <div id="about" class="column is-two-fifths is-offset-three-fifths is-flex is-flex-direction-column mt-3 mb-3">
                     <div class="is-flex is-flex-direction-column">
                         <div class="column is-half">
@@ -78,7 +78,7 @@
 
                 <div id="work" class="column is-full mb-6 margin-top-vh-100">
                     <div class="is-flex is-flex-direction-column">
-                        <div class="column is-two-fifths">
+                        <header class="column is-two-fifths">
                             <div class="is-flex is-flex-direction-column has-text-centered">
                                 <h3 class="column is-two-fifths card is-size-3 has-text-weight-medium background-secondary p-1">Work</h3>
 
@@ -86,140 +86,154 @@
                                     <h3 class="card is-size-3 has-text-weight-medium anim-shadow background-secondary p-1">@GitHub</h3>
                                 </a>
                             </div>
-                        </div>
+                        </header>
 
-                        <div class="card column background-primary is-5 ml-5">
-                            <nav class="tabs is-boxed is-fullwidth">
-                                <ul class="border-none">
-                                    <li class="is-active anim-shadow" data-content="#standard"><a class="">Standard</a></li>
-
-                                    <li class="anim-shadow has-text-light" data-content="#detailed"><a class="">Detailed</a></li>
-                                </ul>
-                            </nav>
-
-                            <aside id="standard" class="columns is-multiline is-centered">
-                                <div class="column is-full">
-                                    <div class="card">
-                                        <header class="card-header tertiary">
-                                            <h2 class="card-header-title is-size-4 tertiary">Run Buddy</h2>
-                                        </header>
-
-                                        <a class="card-image" href="https://programmingastorm.github.io/RunBuddy/">
-                                            <img src="./assets/img/RunBuddy.PNG" alt="Run Buddy"></src>
-                                        </a>
+                        <main class="column is-5 is-flex is-justify-content-space-between size-100">
+                            <section class="card background-primary w-45p">
+                                <nav class="tabs is-boxed is-fullwidth m-0">
+                                    <ul class="border-none">
+                                        <li class="is-active anim-shadow" data-content="#standard"><a class="">Standard</a></li>
+    
+                                        <li class="anim-shadow has-text-light" data-content="#detailed"><a class="">Detailed</a></li>
+                                    </ul>
+                                </nav>
+    
+                                <aside id="standard" class="columns is-multiline is-centered m-0">
+                                    <div class="column is-full">
+                                        <div class="card">
+                                            <header class="card-header tertiary">
+                                                <h2 class="card-header-title is-size-4 color-secondary">Run Buddy</h2>
+                                            </header>
+    
+                                            <a class="card-image" href="https://programmingastorm.github.io/RunBuddy/">
+                                                <img src="./assets/img/RunBuddy.PNG" alt="Run Buddy"></src>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+    
+                                    <div class="column is-half">
+                                        <div class="card">
+                                            <header class="card-header tertiary">
+                                                <h2 class="card-header-title is-size-4 color-secondary">Horiseon</h2>
+                                            </header>
+                                            <a class="card-image" href="https://programmingastorm.github.io/MarkPavelCodeRefactor/">
+                                                <img src="./assets/img/Horiseon.PNG" alt="Horiseon">
+                                            </a>
+                                        </div>                                
+                                    </div>
+    
+                                    <div class="column is-half m-0">
+                                        <div class="card">
+                                            <header class="card-header tertiary">
+                                                <h2 class="card-header-title is-size-4 color-secondary">FurEverHome</h2>
+                                            </header>
+    
+                                            <a class="card-image" href="https://programmingastorm.github.io/FurEverHome/">
+                                                <img src="./assets/img/FurEverHome.png" alt="FurEverHome">
+                                            </a>
+                                        </div>                                
+                                    </div>
+                                </aside>
+    
+                                <aside id="detailed" class="menu gone">
+                                    <div class="box background-secondary p-2">
+                                        <p class="color-tertiary menu-label">
+                                            Personal
+                                        </p>
+                                        <ul id="personal" class="menu-list">
+                                            <li id="completed" class="color-tertiary">
+                                                <a class="is-active">Completed</a>
+                                                <ul class="border-tertiary">
+                                                    <li><a>Portfolio</a></li>
+                                                    <li><a>3D Background</a></li>
+                                                </ul>
+                                            </li>
+        
+                                            <li id="wip" class="color-tertiary">
+                                                <a class="">Work In Progress</a>
+                                                <ul class="gone border-tertiary">
+                                                    <li><a>Portfolio</a></li>
+                                                    <li><a>Minecraft Clone Game</a></li>
+                                                    <li><a>Facebook Management Tools/App</a></li>
+                                                </ul>
+                                            </li>
+    
+                                            <li id="planned" class="color-tertiary">
+                                                <a class="">Planned</a>
+                                                <ul class="gone border-tertiary">
+                                                    <li><a>Organizational Multi-Tool</a></li>
+                                                    <li><a>Code Documentation Toolset</a></li>
+                                                    <li><a>Purple Mega-Death Sword (PMDS)</a></li>
+                                                    <li><a>Currently-Unnamed Arch Distro</a></li>
+                                                </ul>
+                                            </li>
+        
+                                            <li id="dropped" class="color-tertiary">
+                                                <a class="">Dropped</a>
+                                                <ul class="gone border-tertiary">
+                                                    <li><a>Object Simulator</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+        
+                                        <p class="color-tertiary menu-label">
+                                            Bootcamp
+                                        </p>
+                                        <ul id="bootcamp" class="menu-list">
+                                            <li id="group-projects" class="color-tertiary">
+                                                <a class="">Group Projects</a>
+                                                <ul class="gone border-tertiary">
+                                                    <li><a>FurEverHome</a></li>
+                                                </ul>
+                                            </li>
+    
+                                            <li id="noteworthy" class="color-tertiary">
+                                                <a class="">Noteworthy</a>
+                                                <ul class="gone border-tertiary">
+                                                    <li><a>FurEverHome</a></li>
+                                                    <li><a>MegaTechBlog</a></li>
+                                                    <li><a>Express Note Taker</a></li>
+                                                    <li><a>E-commerce Backend</a></li>
+                                                    <li><a>TaskmasterPro</a></li>
+                                                    <li><a>Portfolio</a></li>
+                                                    <li><a>WeatherDashboard</a></li>
+                                                </ul>
+                                            </li>
+    
+                                            <li id="misc" class="color-tertiary">
+                                                <a class="">Miscellaneous</a>
+                                                <ul class="gone border-tertiary">
+                                                    <li><a>zookeepr</a></li>
+                                                    <li><a>TeamProfileGenerator</a></li>
+                                                    <li><a>jest-another-RPG</a></li>
+                                                    <li><a>READMEGenerator</a></li>
+                                                    <li><a>PortfolioGenerator</a></li>
+                                                    <li><a>GitItDone</a></li>
+                                                    <li><a>CodeQuiz</a></li>
+                                                    <li><a>Taskinator</a></li>
+                                                    <li><a>RanPassGen</a></li>
+                                                    <li><a>RobotGladiator</a></li>
+                                                    <li><a>RunBuddy</a></li>
+                                                    <li><a>MarkPavelCodeRefactor</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </section>
 
-                                <div class="column is-half">
-                                    <div class="card">
-                                        <header class="card-header tertiary">
-                                            <h2 class="card-header-title is-size-4 tertiary">Horiseon</h2>
-                                        </header>
-                                        <a class="card-image" href="https://programmingastorm.github.io/MarkPavelCodeRefactor/">
-                                            <img src="./assets/img/Horiseon.PNG" alt="Horiseon">
-                                        </a>
-                                    </div>                                
-                                </div>
-
-                                <div class="column is-half">
-                                    <div class="card">
-                                        <header class="card-header tertiary">
-                                            <h2 class="card-header-title is-size-4 tertiary">FurEverHome</h2>
-                                        </header>
-
-                                        <a class="card-image" href="https://programmingastorm.github.io/FurEverHome/">
-                                            <img src="./assets/img/FurEverHome.png" alt="FurEverHome">
-                                        </a>
-                                    </div>                                
-                                </div>
-                            </aside>
-
-                            <aside id="detailed" class="menu gone">
-                                <div class="box background-secondary p-2">
-                                    <p class="color-tertiary menu-label">
-                                        Personal
+                            <aside id="description" class="card is-flex is-justify-content-center is-align-self-center background-primary size-23rem gone">
+                                <article class="is-flex is-justify-content-center is-align-items-center color-secondary p-3 m-2">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti commodi magnam molestias inventore quos doloremque? Voluptatibus repudiandae ullam magnam aspernatur, reiciendis nisi sit dignissimos soluta illo asperiores. Libero, ad explicabo.
                                     </p>
-                                    <ul id="personal" class="menu-list">
-                                        <li id="completed" class="color-tertiary">
-                                            <a class="is-active">Completed</a>
-                                            <ul class="border-tertiary">
-                                                <li><a>Portfolio</a></li>
-                                                <li><a>3D Background</a></li>
-                                            </ul>
-                                        </li>
-    
-                                        <li id="wip" class="color-tertiary">
-                                            <a class="">Work In Progress</a>
-                                            <ul class="gone border-tertiary">
-                                                <li><a>Portfolio</a></li>
-                                                <li><a>Minecraft Clone Game</a></li>
-                                                <li><a>Facebook Management Tools/App</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li id="planned" class="color-tertiary">
-                                            <a class="">Planned</a>
-                                            <ul class="gone border-tertiary">
-                                                <li><a>Organizational Multi-Tool</a></li>
-                                                <li><a>Code Documentation Toolset</a></li>
-                                                <li><a>Purple Mega-Death Sword (PMDS)</a></li>
-                                                <li><a>Currently-Unnamed Arch Distro</a></li>
-                                            </ul>
-                                        </li>
-    
-                                        <li id="dropped" class="color-tertiary">
-                                            <a class="">Dropped</a>
-                                            <ul class="gone border-tertiary">
-                                                <li><a>Object Simulator</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-    
-                                    <p class="color-tertiary menu-label">
-                                        Bootcamp
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti commodi magnam molestias inventore quos doloremque? Voluptatibus repudiandae ullam magnam aspernatur, reiciendis nisi sit dignissimos soluta illo asperiores. Libero, ad explicabo.
                                     </p>
-                                    <ul id="bootcamp" class="menu-list">
-                                        <li id="group-projects" class="color-tertiary">
-                                            <a class="">Group Projects</a>
-                                            <ul class="gone border-tertiary">
-                                                <li><a>FurEverHome</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li id="noteworthy" class="color-tertiary">
-                                            <a class="">Noteworthy</a>
-                                            <ul class="gone border-tertiary">
-                                                <li><a>FurEverHome</a></li>
-                                                <li><a>MegaTechBlog</a></li>
-                                                <li><a>Express Note Taker</a></li>
-                                                <li><a>E-commerce Backend</a></li>
-                                                <li><a>TaskmasterPro</a></li>
-                                                <li><a>Portfolio</a></li>
-                                                <li><a>WeatherDashboard</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li id="misc" class="color-tertiary">
-                                            <a class="">Miscellaneous</a>
-                                            <ul class="gone border-tertiary">
-                                                <li><a>zookeepr</a></li>
-                                                <li><a>TeamProfileGenerator</a></li>
-                                                <li><a>jest-another-RPG</a></li>
-                                                <li><a>READMEGenerator</a></li>
-                                                <li><a>PortfolioGenerator</a></li>
-                                                <li><a>GitItDone</a></li>
-                                                <li><a>CodeQuiz</a></li>
-                                                <li><a>Taskinator</a></li>
-                                                <li><a>RanPassGen</a></li>
-                                                <li><a>RobotGladiator</a></li>
-                                                <li><a>RunBuddy</a></li>
-                                                <li><a>MarkPavelCodeRefactor</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </aside>
-                        </div>
+                                </article>
+                            </aside>                            
+                        </main>
+                        
                     </div>
                 </div>
 
@@ -257,6 +271,35 @@
             </div>
         </footer>
 
+        <div class="modal">
+            <div class="modal-background"></div>
+            
+            <main class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">
+                        
+                    </p>
+                </header>
+
+                <section class="modal-card-body">
+                    <div class="content">
+                        <p>
+                            Description
+                        </p>
+                    </div>
+                </section>
+
+                <footer class="modal-card-foot">
+                    <a class="button is-primary has-text-light">Repository</a>
+                    <a class="button">Deployment</a>
+                </footer>
+            </main>
+
+            <button class="modal-close"></button>
+        </div>
+
+        <!--<script async src="bundle.js"></script>-->
+
         <script 
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
@@ -265,7 +308,5 @@
         </script>
 
         <script src="index.js"></script>
-
-        <!--<script defer src="bundle.js"></script>-->
     </body>
 </html>

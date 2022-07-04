@@ -171,8 +171,16 @@ a {
 }
 
 .size-100 {
-    height: 100%;
-    width: 100%;
+    height: 100%!important;
+    width: 100%!important;
+}
+.size-23rem {
+    height: 23rem;
+    width: 23rem;
+}
+
+.w-45p {
+    width: 45%!important;
 }
 
 .background-primary {
