@@ -10,12 +10,6 @@ $(".tabs").click(event => {
     if(target.hasClass('is-active')) {
         target.removeClass('is-active').addClass('has-text-light');
 
-        if(!sibling.hasClass('is-active') && !target.hasClass('is-active')) {
-            parent.removeClass('height-600');
-        } else {
-            parent.addClass('height-600');
-        }
-
         checkContent(target);
         checkContent(sibling);
 
@@ -24,12 +18,6 @@ $(".tabs").click(event => {
 
     target.removeClass('has-text-light').addClass('is-active');
     sibling.removeClass('is-active').addClass('has-text-light');
-
-    if(!sibling.hasClass('is-active') && !target.hasClass('is-active')) {
-        parent.removeClass('height-600');
-    } else {
-        parent.addClass('height-600');
-    }
 
     checkContent(sibling);
     checkContent(target);

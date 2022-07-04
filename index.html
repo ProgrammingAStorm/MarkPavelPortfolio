@@ -53,8 +53,8 @@
                 </div>
             </section>
     
-            <section class="scroll-container columns is-multiline has-text-black">
-                <div id="about" class="scroll-area column is-two-fifths is-offset-three-fifths is-flex is-flex-direction-column mt-3 mb-3">
+            <section class="columns is-multiline has-text-black">
+                <div id="about" class="column is-two-fifths is-offset-three-fifths is-flex is-flex-direction-column mt-3 mb-3">
                     <div class="is-flex is-flex-direction-column">
                         <div class="column is-half">
                             <div class="card is-flex is-align-items-center is-justify-content-center background-secondary">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
 
-                <div id="work" class="scroll-area column is-full mb-6 margin-top-vh-100">
+                <div id="work" class="column is-full mb-6 margin-top-vh-100">
                     <div class="is-flex is-flex-direction-column">
                         <div class="column is-two-fifths">
                             <div class="is-flex is-flex-direction-column has-text-centered">
@@ -88,7 +88,7 @@
                             </div>
                         </div>
 
-                        <div class="card column background-primary is-5 ml-5 height-600">
+                        <div class="card column background-primary is-5 ml-5">
                             <nav class="tabs is-boxed is-fullwidth">
                                 <ul class="border-none">
                                     <li class="is-active anim-shadow" data-content="#standard"><a class="">Standard</a></li>
@@ -135,44 +135,95 @@
                             </aside>
 
                             <aside id="detailed" class="menu gone">
-                                <p class="menu-label">
-                                  General
-                                </p>
-                                <ul class="menu-list">
-                                  <li><a>Dashboard</a></li>
-                                  <li><a>Customers</a></li>
-                                </ul>
-                                <p class="menu-label">
-                                  Administration
-                                </p>
-                                <ul class="menu-list">
-                                  <li><a>Team Settings</a></li>
-                                  <li>
-                                    <a class="is-active">Manage Your Team</a>
-                                    <ul>
-                                      <li><a>Members</a></li>
-                                      <li><a>Plugins</a></li>
-                                      <li><a>Add a member</a></li>
+                                <div class="box background-secondary p-2">
+                                    <p class="color-tertiary menu-label">
+                                        Personal
+                                    </p>
+                                    <ul id="personal" class="menu-list">
+                                        <li class="color-tertiary">
+                                            <a id="completed" class="is-active">Completed</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>Portfolio</a></li>
+                                                <li><a>3D Background</a></li>
+                                            </ul>
+                                        </li>
+    
+                                        <li class="color-tertiary">
+                                            <a id="wip" class="is-active">Work In Progress</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>Portfolio</a></li>
+                                                <li><a>Minecraft Clone</a></li>
+                                                <li><a>Facebook Management Tools/App</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="color-tertiary">
+                                            <a id="planned" class="is-active">Planned</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>Organizational Multi-Tool</a></li>
+                                                <li><a>Code Documentation Toolset</a></li>
+                                                <li><a>Purple Mega-Death Sword (PMDS)</a></li>
+                                                <li><a>Currently-Unnamed Arch Distro</a></li>
+                                            </ul>
+                                        </li>
+    
+                                        <li class="color-tertiary">
+                                            <a id="dropped" class="is-active">Dropped</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>Object Simulator</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
-                                  </li>
-                                  <li><a>Invitations</a></li>
-                                  <li><a>Cloud Storage Environment Settings</a></li>
-                                  <li><a>Authentication</a></li>
-                                </ul>
-                                <p class="menu-label">
-                                  Transactions
-                                </p>
-                                <ul class="menu-list">
-                                  <li><a>Payments</a></li>
-                                  <li><a>Transfers</a></li>
-                                  <li><a>Balance</a></li>
-                                </ul>
+    
+                                    <p class="color-tertiary menu-label">
+                                        Bootcamp
+                                    </p>
+                                    <ul id="bootcamp" class="menu-list">
+                                        <li id="group-projects" class="color-tertiary">
+                                            <a class="is-active">Group Projects</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>FurEverHome</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li id="noteworthy" class="color-tertiary">
+                                            <a class="is-active">Noteworthy</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>FurEverHome</a></li>
+                                                <li><a>MegaTechBlog</a></li>
+                                                <li><a>Express Note Taker</a></li>
+                                                <li><a>E-commerce Backend</a></li>
+                                                <li><a>TaskmasterPro</a></li>
+                                                <li><a>Portfolio</a></li>
+                                                <li><a>WeatherDashboard</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li id="misc" class="color-tertiary">
+                                            <a class="is-active">Miscellaneous</a>
+                                            <ul class="border-tertiary">
+                                                <li><a>zookeepr</a></li>
+                                                <li><a>TeamProfileGenerator</a></li>
+                                                <li><a>jest-another-RPG</a></li>
+                                                <li><a>READMEGenerator</a></li>
+                                                <li><a>PortfolioGenerator</a></li>
+                                                <li><a>GitItDone</a></li>
+                                                <li><a>CodeQuiz</a></li>
+                                                <li><a>Taskinator</a></li>
+                                                <li><a>RanPassGen</a></li>
+                                                <li><a>RobotGladiator</a></li>
+                                                <li><a>RunBuddy</a></li>
+                                                <li><a>MarkPavelCodeRefactor</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </aside>
                         </div>
                     </div>
                 </div>
 
-                <div id="contact" class="scroll-area column is-half is-offset-one-quarter margin-top-vh-100 mb-6">
+                <div id="contact" class="column is-half is-offset-one-quarter margin-top-vh-100 mb-6">
                     <div class="is-flex is-flex-direction-column">
                         <div class="column is-one-quarter is-offset-1 padding-0px">
                             <div class="card is-flex is-align-items-center is-justify-content-center size-100 background-secondary">
@@ -213,7 +264,7 @@
             referrerpolicy="no-referrer">
         </script>
 
-        <script defer src="bundle.js"></script>
+        <!--<script defer src="bundle.js"></script>-->
         
         <script src="index.js"></script>
     </body>

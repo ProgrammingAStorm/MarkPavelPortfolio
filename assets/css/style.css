@@ -70,14 +70,6 @@ a {
     color: inherit!important;
 }
 
-.scroll-container {
-    scroll-snap-type: y mandatory;
-}
-
-.scroll-area {
-    scroll-snap-align: start;
-}
-
 .secondary {
     border-color: var(--secondary-color);
     background: #d0f4fb;
@@ -91,10 +83,6 @@ a {
 
 .gone {
     display: none!important;
-}
-
-.height-600 {
-    min-height: 600px;
 }
 
 .margin-top-vh-100 {
@@ -195,6 +183,10 @@ a {
 }
 .background-tertiary {
     background: var(--tertiary-color);
+}
+
+.border-tertiary {
+    border-color: var(--tertiary-color)!important;
 }
 
 .color-secondary {
