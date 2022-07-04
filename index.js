@@ -1,14 +1,4 @@
-function checkContent(target) {
-    const content = $(
-        $(target).attr('data-content')
-    );
-
-    if(target.hasClass('is-active')) {
-        content.removeClass('gone');
-    } else {
-        content.addClass('gone');
-    }
-}
+window.scrollTo(0, 0);
 
 $(".tabs").click(event => {
     event.preventDefault();
@@ -44,3 +34,15 @@ $(".tabs").click(event => {
     checkContent(sibling);
     checkContent(target);
 });
+
+function checkContent(target) {
+    const content = $(
+        $(target).attr('data-content')
+    );
+
+    if(target.hasClass('is-active')) {
+        content.removeClass('gone');
+    } else {
+        content.addClass('gone');
+    }
+}

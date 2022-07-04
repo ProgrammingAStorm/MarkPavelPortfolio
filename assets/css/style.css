@@ -70,6 +70,14 @@ a {
     color: inherit!important;
 }
 
+.scroll-container {
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+    scroll-snap-align: start;
+}
+
 .secondary {
     border-color: var(--secondary-color);
     background: #d0f4fb;
