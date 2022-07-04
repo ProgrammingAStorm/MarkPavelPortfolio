@@ -9,3 +9,6 @@ This page is my portfolio. Built in HTML and CSS, I believe it shows off my pers
 
 ## Deployment
 https://programmingastorm.github.io/MarkPavelPortfolio/
+
+# DISCLAIMER
+The following deployment is the MVP and is still VERY WIP. It's barely responsive and works best on chrome with a display of 1920 x 1080. Otherwise, alignment of things is not guaranteed to look good or even be working.
